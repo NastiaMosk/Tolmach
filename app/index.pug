@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+html(lang="ru")
+  include pug/includes/head.pug
+  body
+    include pug/includes/header.pug 
+    .homepage#home
+      .text-band 
+        .text-band__title 
+          img(src="../img/title.svg" alt="ТолмачЪ - христианская настольная игра")
+        .text-band__h-line
+        h1.text-band__subtitle ТолмачЪ
+        p.text-band__moto.
+          Увлекательная христианская игра 
+          для приятного времяпровождения 
+          с друзьми и семьей
+    .page-content  
+      .block.description#description
+        .secondary-heading
+          h2.secondary-heading__text Что такое ТолмачЪ?
+        p.text.
+          Игра TolmacH (ТолмачЪ) – это командная игра, целью создания которой
+          является общение вокруг Слова Божьего.Возможно, вы даже никогда не
+              предполагали, что Библия содержит такие странные и удивительные слова и
+              фразы.  
+        .description__features 
+          .Synodal-feature.feature
+            span.Synodal-feature__icon
+            p.Synodal-feature__text.
+              В основе игры лежат слова и фразы из Синодальной Библии 
+          .amount-feature.feature
+            span.amount-feature__icon
+            p.amount-feature__text.
+              В игре использовано более 1200 слов и фраз для объяснения
+        p.text. 
+          Мы надеемся, что это принесет вам новые знания, умение взаимодействовать 
+          в команде и, конечно, радость общения, к чему и призывает нас наш
+          Господь
+        img(src='' srcset='' alt='')
+      .block.hallmark#hallmark
+        .secondary-heading
+          h2.secondary-heading__text Особенности этой игры
+        p.text.
+          В игру включены элементы внезапности – это 8 видов карточек-сюрпризов,
+          что придает игре динамику и непресказуемость.
+        p.text.
+          А еще мы добавили бонусные баллы для тех сумеет объяснить слова более сложным методом.
+        .cards-container
+          .floating-pointer  
+          include pug/includes/cards.pug
+        
+      .parallax_scroll
+
+      .block.card-anatomy#card-anatomy
+        .secondary-heading
+          h2.secondary-heading__text Анатомия карточки
+
+        .card-item.method
+          h3.card-item_heading Методы объяснения
+          p.text Методы с помощью которых можно обьснять данное слово или фразу
+        .card-item.field.right-align
+          h3.card-item_heading Слова для обьяснения
+          p.text Слово или фраза для обьяснения своей команде
+
+        .card-example
+          img(src='../img/card.jpg' srcset='' alt='Настольная игра Толмач-игральная карточка').card-example__element
+          .card-example__element.points
+          .card-example__element.field
+          .card-example__element.method
+          .card-example__element.bonus
+
+
+        .card-item.bonus.right-align
+          h3.card-item_heading Бонусные баллы
+          p.text Бонусные баллы за сложность которые можно получить только если вы смогли объяснить слова более сложным методом
+
+        .card-item.points
+          h3.card-item_heading  Базовые баллы
+          p.text Баллы, которые заработает команда, если угадает слово или фразу
+
+        a(href="../Rul es.pdf" download="Tolmach_Rules").download-button.button Скачать правила
+      .block.purchase#purchase
+        .secondary-heading
+          h2.secondary-heading__text Купить игру
+        include pug/includes/purcase-card.pug 
+    include pug/includes/footer.pug 
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="js/jquery.line.js")
+    script(src="js/libs.min.js")
+    script(src="js/main.js")

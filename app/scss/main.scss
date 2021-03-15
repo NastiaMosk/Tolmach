@@ -1,0 +1,291 @@
+@import 'vars';
+@import 'libs';
+@import'base';
+@import 'fonts';
+@import 'header';
+@import 'cards';
+@import 'pointer';
+.parallax_scroll {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url(../img/background.svg);
+}
+.homepage {
+  position: relative;
+  height: 100vh;
+  color: #7D1C19;
+  & .text-band {
+    background-color: #F2EDDF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    text-align: center;
+    width: 100%;
+    padding: 2rem 0;
+    &__h-line {
+      width: 50vw;
+      padding-bottom: 10px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #7D1C19;
+    }
+    &__title img{
+      width: 80%;
+      max-width: 600px;
+    }
+    &__subtitle {
+      font-family: $subtitle;
+      font-size: calc(1rem + 1vw);
+      letter-spacing: 0.5em;
+      margin: 0;
+    }
+    &__moto {
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin: 0 0 0 0;
+      color: black;
+    }
+  }
+}
+.description {
+  & .secondary-heading {
+    &::before {
+      background: url('../img/description.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &__features {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+    & .feature {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: dense;
+      & .Synodal-feature {
+        &__icon {
+          width: 5rem;
+          height: 5rem;
+          margin: 0.5em;
+          background: url('../img/bible.svg') no-repeat;
+          background-size: contain;
+        }
+        &__text {
+          grid-column: 2;
+
+        }
+      }
+        & .amount-feature {
+          &__icon {
+            grid-column: 2;
+            width: 5rem;
+            height: 5rem;
+            margin: 0.5em;
+            background: url('../img/text.svg') no-repeat;
+            background-size: contain;
+        }
+        &__text {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+.hallmark {
+  & .secondary-heading {
+    &::before {
+      background: url('../img/hallmark.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  & .cards-container {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 4rem;
+    & .floating-pointer {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+.card-anatomy {
+  display: grid;
+  & .secondary-heading {
+    &::before {
+      background: url('../img/card.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  & .card-item {
+    max-width: 25em;
+    & h3 {
+      border-bottom: 2px solid #9b754a;
+      margin: 0;
+      padding: 0.5em;
+      padding-left: 10%;
+      max-width: fit-content;
+      box-sizing: border-box;
+
+    }
+    & .text {
+      padding-left: 10%;
+    }
+    &.right-align {
+      text-align: right;
+      justify-self: end;
+
+      & h3 {
+        padding-right: 10%;
+        margin-left: auto;
+
+      }
+      & .text {
+        padding-right: 10%;
+      }
+    }
+  }
+  & .card-example {
+    position: relative;
+    max-width: 25em;
+    margin: 4rem auto;
+    & img {
+      width: 100%;
+      box-shadow: 2px 3px 9px 0px #0000007d;
+      border-radius: 10px;
+    }
+    & .card-example__element {
+      &:not(img) {
+        position: absolute;
+      }
+      &.points {
+        top: 74.5%;
+        left: 3.4%;
+        width: 8%;
+        height: 13%;
+        background: url('../img/3.svg') no-repeat;
+        background-size: contain;
+      } 
+      &.method {
+        top: 29.5%;
+        left: 21.6%;
+        width: 12%;
+        height: 18%;
+        background: url('../img/s.svg') no-repeat;
+        background-size: contain;
+      } 
+      &.field {
+        top: 32.5%;
+        left: 32.6%;
+        width: 61.6%;
+        height: 13.9%;
+        background: url(../img/field.png) no-repeat;
+        background-size: cover;
+        border: 0.1px solid #000000;
+      }
+      &.bonus {
+        top: 69.1%;
+        left: 21.5%;
+        width: 12%;
+        height: 18%;
+        background: url('../img/d3.svg') no-repeat;
+        background-size: contain;
+      } 
+    }
+  }
+  & .download-button{
+    color: #ffffff;
+    background: #5e6d4d;
+    margin: 0 auto;
+    margin-top: 3rem;
+    &:hover {
+      background: #889974;
+    }
+    // &:active {
+    //   opacity: 80%;
+    // }
+  }
+}
+.purchase.block {
+  display: grid;
+  justify-items: center;
+  padding: 1.2rem 0;
+  & .secondary-heading {
+    margin: 1rem 2.5rem;
+    &::before {
+      background: url('../img/purchase.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.purcase-card {
+  position: relative;
+  width: 100%;
+  max-width: 25em;
+  margin: 0 auto;
+  & .purcase-card__inner {
+    display: grid;
+    width: -webkit-fill-available;
+    background: #EEE8DC;
+    grid-template-columns: initial;
+    grid-template-rows: auto;
+    border: 16px solid #F9F7EF;
+    padding: 10px;
+    box-shadow: 4px 11px 25px -19px black;
+    border-radius: 20px;
+    & > * {
+      margin: 1%;
+    }
+    & .text::first-letter {
+      padding-left: 3%;
+    }
+  }
+}
+.purchase-link {
+  background: #DCD0BF;
+  border-radius: 10px;
+  line-height: 3rem;
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: 4%;
+  & span {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    &.gmail {
+      background: url('../img/gmail.svg') no-repeat;
+      background-size: contain;
+    }
+    &.facebook {
+      background: url('../img/facebook.svg') no-repeat;
+      background-size: contain;
+    }
+    &.instagram {
+      background: url('../img/instagram.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.footer {
+  & .Nastia_Copyright {
+    position: absolute;
+    height: 50px;
+    background: black;
+    color: #ddd;
+    width: 100%;
+    & cite {
+      font-style: normal;
+      font-size: calc(7px + .5vw);
+      display: block;
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+}
+@import 'media';

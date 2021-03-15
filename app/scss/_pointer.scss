@@ -1,0 +1,29 @@
+.floating-pointer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transform: rotate(25deg) scaleX(-1);
+  background: url('../img/finger.svg') no-repeat;
+
+  // transform: rotate(-125deg);
+  // background: url('../img/walk.svg') no-repeat;
+
+  // transform: rotate(45deg) translateX(30px);
+  // background: url('../img/pointing-up.svg') no-repeat;
+
+  background-size: contain;
+  z-index: 15;
+  animation-name: pointer;
+  animation-duration: 2.5s;
+  // animation-direction: alternate;
+  animation-iteration-count: infinite;
+  opacity: 75%;
+  transition: opacity 500ms ease;
+}
+
+@keyframes pointer {
+  0%   {bottom: -30px;left: -20px;}
+  50%  {bottom: 10px;left: 0;}
+  100% {bottom: -30px;left: -20px;}
+}

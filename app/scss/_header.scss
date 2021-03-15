@@ -1,0 +1,43 @@
+.header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 100;
+}
+// .header-content {
+// }
+.side-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  bottom: 0;
+  &__nav-button {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 0.5em;
+    &.description {
+      background: url('../img/description.svg') no-repeat;
+      background-size: contain;
+    }
+    &.hallmark {
+      background: url('../img/hallmark.svg') no-repeat;
+      background-size: contain;
+    }
+    &.card-anatomy {
+      background: url('../img/card.svg') no-repeat;
+      background-size: contain;
+    }
+    &.purchase {
+      background: url('../img/purchase.svg') no-repeat;
+      background-size: contain;
+    }
+    &.home {
+      background: url('../img/home.svg') no-repeat;
+      background-size: contain;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+  }
+}
